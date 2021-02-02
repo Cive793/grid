@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #wrapper > * {
+        border: 1px solid #000;
+      }
+      #wrapper {
+        display: grid;
+      }
+      main {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+      }
+      main h1 {
+        grid-column: 1/-1;
+      }
+      article {
+        background: hotpink;
+      }
+      @media screen and (min-width: 700px) {
+        #wrapper {
+          grid-template-columns: 2fr 200px;
+        }
+        header,
+        footer {
+          grid-column: 1/-1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrapper">
+      <header>header</header>
+      <main>
+        <h1>Main</h1>
+        <article><h2>Article</h2></article>
+        <article><h2>Article</h2></article>
+        <article><h2>Article</h2></article>
+        <article><h2>Article</h2></article>
+        <article><h2>Article</h2></article>
+        <article><h2>Article</h2></article>
+        <article><h2>Article</h2></article>
+        <article><h2>Article</h2></article>
+        <article><h2>Article</h2></article>
+        <article><h2>Article</h2></article>
+      </main>
+      <aside>aside</aside>
+      <footer>footer</footer>
+    </div>
+  </body>
+</html>
